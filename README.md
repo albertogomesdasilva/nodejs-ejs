@@ -24,3 +24,5 @@ npm install --save mysql2
 # Em caso de erro de conexão com o banco de dados insira linha abaixo no banco de dados
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456'
+
+### FORMAÇÃO NODEJS - AULA 45
