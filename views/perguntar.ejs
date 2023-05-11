@@ -4,9 +4,8 @@
 
 
 <body>
-    <h1>Formulário de Perguntas</h1>
-
-<div class="container">
+    <div class="container">
+    <h1>Sistema de Perguntas</h1>
     <div class="card" id="formulario-perguntas">
 
         <div class="card-header">
@@ -14,11 +13,11 @@
             <hr>
         </div>
         <div class="card-body">
-            <form action="">
+            <form method="POST" action="/salvarpergunta">
                 <label for="">Título:</label>
-                <input type="text" class="form-control" aria-placeholder="Título"><br />
+                <input type="text" class="form-control" name="titulo" placeholder="Título"><br />
                 <label for="">Descrição:</label>
-                <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Descreva a pergunta"></textarea><br />
+                <textarea class="form-control" name="descricao" id="" cols="30" rows="10" placeholder="Descreva a pergunta"></textarea><br />
                 <button class="btn  btn-primary">Perguntar</button>
             </form>
         </div>

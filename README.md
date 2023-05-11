@@ -11,3 +11,7 @@ git push -u origin main
 # Como fazer include
 
 <%- include('./partials/header.ejs') %>
+
+# Para receber os dados de um formulário instalamos a biblioteca do express: body-parser
+npm install body-parser --save
+
