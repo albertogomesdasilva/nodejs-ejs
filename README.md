@@ -8,4 +8,6 @@ git branch -M main
 git remote add origin https://github.com/albertogomesdasilva/nodejs-ejs.git
 git push -u origin main
 
-FIM
+# Como fazer include
+
+<%- include('./partials/header.ejs') %>
