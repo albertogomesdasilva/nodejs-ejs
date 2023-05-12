@@ -20,9 +20,31 @@
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
+          
+        </div>
+          
+        <div class="container">
+          <hr>
+          <h2>Lista de Perguntas</h2>
+          <hr>
+          
+          <% perguntas.forEach(pergunta => { %>
+            <div class="card-body">
+                <h3><%= pergunta.titulo %> </h3>
+            </div>
+            
+            <ul>
+              <li> <%= pergunta.titulo %> - <%= pergunta.descricao %> </li>
+              
+            </ul> 
+            <div class="card-footer">
 
-    </div>
+              <button class="btn btn-secondary">Responder</button>
+            </div>
 
+         <% }) %></h3>
+
+        </div>
 
 </body>
 <%- include('./partials/footer.ejs') %>

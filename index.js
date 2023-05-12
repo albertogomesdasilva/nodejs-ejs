@@ -29,7 +29,17 @@ app.use(bodyParser.json())
 
 app.get('/',(req, res) => {
 
-    res.render("index")
+    Pergunta.findAll({ raw: true, order: [[ 'id', 'DESC']] }).then(perguntas => {
+        console.log(perguntas)
+        res.render('index', {
+            perguntas: perguntas
+        })
+    })
+    .catch((erro) => {
+        console.log('Ocorreu um erro ao consultar o banco' + erro)
+    })
+    // res.render("index")
+
  })
 
 app.get('/perguntar', (req, res) => {
