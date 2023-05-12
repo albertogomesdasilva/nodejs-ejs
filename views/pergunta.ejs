@@ -25,25 +25,15 @@
           
         <div class="container">
           <hr>
-          <h2>Lista de Perguntas</h2>
+          <h2>Página da Pergunta</h2>
           <hr>
-          
-          <% perguntas.forEach(pergunta => { %>
-            <div class="card-body">
-              <a href="/pergunta/<%= pergunta.id %>"  <h3><%= pergunta.titulo %> </h3> 
-            </div>
-            
             <ul>
-            <h3>  <%= pergunta.titulo %> - <%= pergunta.descricao %> </h3> </a>
-              
+              <h3>TÍTULO: <%= pergunta.titulo %></h3>
+              <h2> <%= pergunta.descricao %></h2>
             </ul> 
             <div class="card-footer">
-
-             <a href="/pergunta/<%= pergunta.id %> "<button class="btn btn-secondary">Responder</button> </a>
+              <button class="btn btn-secondary">Responder</button>
             </div>
-
-         <% }) %></h3>
-
         </div>
 
 </body>

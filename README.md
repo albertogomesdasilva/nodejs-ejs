@@ -25,4 +25,4 @@ npm install --save mysql2
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456'
 
-### FORMAÇÃO NODEJS - AULA 45
+### FORMAÇÃO NODEJS - AULA 52

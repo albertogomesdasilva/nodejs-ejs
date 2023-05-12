@@ -6,6 +6,7 @@ const bodyParser = require("body-parser")
 const connection = require('./database/database')
 
 const Pergunta = require('./database/Pergunta')
+const Resposta = require('./database/Resposta')
 
 connection
     .authenticate()
@@ -58,6 +59,22 @@ app.get('/perguntar', (req, res) => {
     }).then(() => {
         console.log('Dados Salvos com sucesso')
         res.redirect('/')
+    })
+ })
+
+ app.get('/pergunta/:id', (req, res) => {
+    var id = req.params.id
+    Pergunta.findOne({
+        where: {id: id}
+    }).then(pergunta => {
+        if(pergunta != undefined) {    // ENCONTROU A PERGUNTA
+            res.render('pergunta', {
+                pergunta
+            }) 
+            
+        }else{                         // NÃO ENCONTROU A PERGUNTA
+            res.redirect('/')
+        }
     })
  })
 
